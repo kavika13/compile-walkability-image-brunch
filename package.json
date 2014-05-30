@@ -1,0 +1,26 @@
+{
+    "name": "compile-walkability-map-brunch",
+    "version": "0.0.0",
+    "description": "Adds walkability image map support to Brunch.",
+    "author": {
+        "name": "Merlyn Morgan-Graham"
+    },
+    "homepage": "https://github.com/kavika13/compile-walkability-map-brunch",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:kavika13/compile-walkability-map-brunch.git"
+    },
+    "main": "./lib/index",
+    "scripts": {
+        "prepublish": "coffee -o lib/ src/"
+    },
+    "engines": {
+        "node": "~0.6.10 || 0.8 || 0.9 || 0.10"
+    },
+    "dependencies": {
+        "pngjs": "~0.4.0",
+        "coffee-script": "1.3.3"
+    },
+    "devDependencies": {
+    }
+}
