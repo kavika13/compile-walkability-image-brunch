@@ -12,14 +12,15 @@
     },
     "main": "./lib/index",
     "scripts": {
-        "prepublish": "coffee -o lib/ src/"
+        "prepublish": "node setup.js prepublish",
+        "postinstall": "node setup.js postinstall"
     },
     "engines": {
         "node": "~0.6.10 || 0.8 || 0.9 || 0.10"
     },
     "dependencies": {
         "pngjs": "~0.4.0",
-        "coffee-script": "1.3.3"
+        "coffee-script": "1.7.1"
     },
     "devDependencies": {
     }
