@@ -17,6 +17,10 @@ If you want to use git version of plugin, add:
 
 * TODO: document configuration options
 
+### Other info
+
+I got the template design for a coffeescript based brunch plugin from [the static-jade-brunch plugin](https://github.com/ilkosta/static-jade-brunch).
+
 ## License
 
 Copyright (c) 2014 Merlyn Morgan-Graham.
