@@ -10,7 +10,10 @@ module.exports = class WalkabilityImageCompiler
         fs.createReadStream(path)
             .pipe(new Png {filterType: 4})
             .on 'parsed', () ->
-                output = 'return [\n'
+                output = 'exports.width = ' + this.width + ';\n'
+                output += 'exports.height = ' + this.height + ';\n'
+
+                output += 'exports.contents = [\n'
                 mapCell =
                     walkable: 0
                     unwalkable: 1
@@ -37,6 +40,7 @@ module.exports = class WalkabilityImageCompiler
                         if not (y == this.height - 1 and x == this.width - 1)
                             output += ', '
                     output += '\n'
+
                 output += ']'
 
                 callback null, {data: output}
